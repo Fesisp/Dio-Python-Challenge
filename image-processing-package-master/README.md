@@ -1,9 +1,9 @@
 # package_name
 
 Description. 
-The package package_name is used to:
-	- 
-	-
+Este foi o limite do projeto, nao pude fazer da forma que desejava pois ocorreu problemas ao utilizar o API para fazer a publicação dos pacotes
+E nem as IAs foram capazes de resolver, se eu tivesse mais tempo teria caprichado especialmente igual os outros projetos.
+
 
 ## Installation
 
@@ -21,7 +21,7 @@ file1_name.my_function()
 ```
 
 ## Author
-My_name
+Felipe da Silva Spinola
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
