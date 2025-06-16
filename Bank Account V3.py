@@ -15,10 +15,15 @@ menu2 = """
 [2] Sacar
 [3] Extrato
 [4] Sair
+[5] Mais opções
 
 => """
-
-
+menu3 = """
+[1] Cadastrar nova conta
+[2] Listar contas
+[3] Alterar senha
+[4] Retornar ao menu principal
+"""
 
 saldo = 0
 limite = 500
@@ -236,9 +241,6 @@ while True:
         if usuario_login:
             print("Bem-vindo de volta ao Fesisbank!\nO que deseja fazer hoje?")
             while True:
-                print("[5] Criar nova conta")
-                print("[6] Listar minhas contas")
-                print("[7] Alterar minha senha")
                 opcao2 = input(menu2).strip().lower()
                 if opcao2 == "1":
                     valor_input = input("Valor para depósito: R$ ")
@@ -262,11 +264,17 @@ while True:
                     print("Saindo da conta.")
                     break
                 elif opcao2 == "5":
-                    criar_conta(usuario_login)
-                elif opcao2 == "6":
-                    listar_contas_do_usuario(usuario_login)
-                elif opcao2 == "7":
-                    alterar_senha(usuario_login)
+                    opcao2 = input(menu3).strip().lower()
+                    if opcao2 == "1":
+                        criar_conta(usuario_login)
+                    elif opcao2 == "2":
+                        listar_contas_do_usuario(usuario_login)
+                    elif opcao2 == "3":
+                        alterar_senha(usuario_login)
+                    elif opcao2 == "4":
+                        continue
+                    else:
+                        print("Opção inválida! Tente novamente.")
                 else:
                     print("Opção inválida! Tente novamente.")
         else:
